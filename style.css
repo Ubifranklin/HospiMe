@@ -1,0 +1,635 @@
+/* Font and Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--deep-blue);
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Colors */
+:root {
+  --deep-blue: #002c54;
+  --light-blue: #5fbff9;
+  --grey: #f1f1f1;
+  --light-yellow: #fff6c2;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background-color: var(--deep-blue);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style:none;
+  display: flex;
+  gap: 5rem;
+  text-align: center;
+  font-size: 20px;
+  align-content: center;
+} 
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, var(--deep-blue), var(--light-blue));
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background-color: var(--light-yellow);
+  color: var(--deep-blue);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ffe55c;
+}
+
+/* Services */
+.services {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--deep-blue);
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--light-yellow);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+
+
+/* About Section Styling to match Services */
+/* Container and Section Styling */
+.about-section {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #222;
+}
+
+/* Flex wrap layout */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Card Styling */
+.about-card {
+  flex: 1 1 100%;
+}
+
+.card {
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  text-align: center;
+}
+
+.card:hover {
+  transform: rotateY(8deg) rotateX(8deg) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card img.section-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card h1 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* Media Queries for Responsive Columns */
+@media (min-width: 600px) {
+  .about-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (min-width: 900px) {
+  .about-card {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}
+
+
+
+/* Contact */
+.contact {
+  padding: 3rem 1rem;
+  background-color: lightblue;
+}
+
+.contact h2 {
+  text-align: center;
+  color: var(--deep-blue);
+  margin-bottom: 1.5rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.75rem;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.contact button {
+  align-self: flex-start;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--deep-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--deep-blue);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25d366;
+  padding: 0.6rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Appointment Section */
+.appointment {
+  background-color: var(--grey);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.appointment form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+/* Modal for Login/Register */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-content input {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.close-button {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.download-app .app-links a,
+.store-links a {
+  display: inline-block;
+  margin: 1rem;
+  font-weight: bold;
+  color: #003366;
+  text-decoration: none;
+  background-color: #fff6c2;
+  padding: 14px 15px;
+  border-radius: 20px;
+  transition: background 1s;
+}
+
+.app-links a:hover,
+.store-links a:hover {
+  background-color: lightblue;
+}
+
+.feature-3d {
+  display: block;
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.feature-3d:hover {
+  transform: scale(1.03) rotateY(4deg);
+}
+
+.for-section .user-group {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.for-section .user-group img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.features-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.features-list li::before {
+  content: "✔️ ";
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .for-section .user-group {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .for-section .user-group img {
+    width: 100%;
+  }
+
+  .for-section .user-group div {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+.services {
+  padding: 50px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  width: 100%;
+  max-width: 250px;
+}
+
+.card:hover {
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: var(--deep-blue);
+  margin-top: 5px;
+}
+
+/* Map Section */
+.map {
+  background-color: var(--light-yellow);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #25d366;
+  padding: 0.6rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 50px;
+  height: 50px;
+}
+.unique-services {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.unique-services h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.store-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.store-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.store-links a:hover {
+  transform: scale(1.05);
+}
+
+.store-links img {
+  width: 40px;
+  height: 40px;
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  margin-top: 1.4rem;
+  justify-content: center;
+  align-items: stretch; 
+  /* Make children stretch to same height */
+}
+.app-preview img {
+  width: 100%;
+  height: auto;       /* maintain aspect ratio */
+  max-height: 100%;   /* limit height to container */
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  object-fit: contain; /* ensures the whole image fits */
+}
+
+.app-preview img:hover {
+  transform: scale(1.03) rotate(1deg);
+}
+
+.features-list {
+  display: flexbox;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+  max-width: 500px;
+}
+
+.feature-item {
+  background: lightblue;
+  padding: 1.4rem;
+  margin: 8px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(15px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-list {
+    text-align: center;
+  }
+}

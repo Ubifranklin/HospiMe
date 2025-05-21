@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HospiMe - Healthcare Closer Than Ever</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- font awesome cdn link -->
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">HospiMe</h1>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#appointment">Appointment</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Bringing Healthcare Closer to You</h2>
+      <p>Your mobile bridge to clinics, pharmacies, labs, and doctors in Africa.</p>
+      <a href="#services" class="btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+  <section id="download" class="download-app">
+  <div class="container">
+    <h1>Download the HospiMe App <style> 
+      h1{
+        text-align: center;
+        font-weight: 1600px;
+        color: blue;
+      } </style></h1>
+    <h2><p>Access doctors, pharmacies, labs and more — right from your device.</p></h2>
+    <div class="app-links">
+      <a href="#"><img src="/assets/app store11.jfif" width="20"> Get on Apple Store</a>
+      <a href="#"><img src="/assets/play store 11.png" width="20"> Get on Play Store</a>
+    </div>
+    <img src="/assets/MHEALT UI UX 1.jpg" alt="App UI" class="feature-3d" style="max-width:100%;border-radius:100px;"/>
+  </div>
+</section>
+  
+<section id="services" class="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="/assets/Virtual Consultations.jfif" alt="Virtual Consultations">
+        <h3>Virtual Consultations</h3>
+      </div>
+      <div class="card">
+        <img src="/assets/E-Prescriptions 1.jfif" alt="E-Prescriptions">
+        <h3>E-Prescriptions</h3>
+      </div>
+      <div class="card">
+        <img src="/assets/Health Records 1.jfif" alt="Health Records">
+        <h3>Health Records</h3>
+      </div>
+      <div class="card">
+        <img src="/assets/Emergency Help 2.jfif" alt="Emergency Help">
+        <h3>Emergency Help</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 👨‍👩‍👧‍👦 Who is HospiMe for? -->
+
+
+<section id="services" class="services">
+  <div class="container">
+    <h2>About HospiMe</h2>
+    <div class="service-cards">
+
+      <div class="card">
+        <img src="/assets/images (19).jpeg" alt="Virtual Consultations">
+        <h2>HospiMe is a health tech innovation that brings healthcare to your fingertips...</h2>
+      </div>
+
+      <div class="card">
+        <img src="/assets/patient.jpeg" alt="E-Prescriptions">
+        <h2>For You and Your Family</h2>
+          <p><h2>AI-powered telemedicine application.</h2></p>
+      </div>
+
+      <div class="card">
+        <img src="/assets/DOCTOR.jpeg" alt="Health Records">
+        <h2>For Medical Practitioners</h2>
+          <p><h2> your practice with cutting-edge technology...</h2></p>
+      </div>
+
+      <div class="card">
+        <img src="/assets/pharmacy.jpeg" alt="Emergency Help">
+        <h2>For Pharmacy Stores</h2>
+          <p><h2>Expand your pharmacy’s reach....</h2></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Why do we care ? -->
+<section id="services" class="services" data-aos="fade-up">
+  <div class="container">
+    <h2>Why Do We Care?</h2>
+    <div class="service-cards" data-aos="zoom-in">
+      
+      <div class = "card">
+      <img src="/assets/we care.jpeg" class="section-image" />
+      <p><h2>We believe in accessible and quality healthcare for everyone...</h2></p>
+    </div>
+    
+      <div class = "card">
+      <img src="/assets/DOCTOR.jpeg" class="section-image" />
+      <h1>Our Goal</h1>
+      <p><h2>We aim to set a new standard for accessible and efficient healthcare...</h2>
+        <style>
+          p{
+            text-align: center;
+          }
+        </style>
+      </p>
+    </div>
+    </div>
+  </div>
+  </section>
+
+
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Book an Appointment</h2>
+      <form id="gsheetForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="date" require    d />
+        <textarea placeholder="Reason for Appointment"></textarea>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="location" class="map">
+    <div class="container">
+      <h2>Find Nearby Hospitals</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18..."
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <form id="gsheetForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="toggleModal()">&times;</span>
+      <h2>Login or Register</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button class="btn-primary">Login</button>
+      <p>Don't have an account? <a href="#">Register</a></p>
+    </div>
+  </div>
+<!-- 🧠 Our Unique Services -->
+<section id="services-unique" class="unique-services">
+  <div class="container">
+    <h2>Our Unique Services</h2>
+
+    <!-- App Links -->
+    <div class="store-links">
+      <a href="#">
+        <img src="/assets/app store.jfif" alt="App Store" />
+        <span>Apple Store</span>
+      </a>
+      <a href="#">
+        <img src="/assets/play store 11.png" alt="Play Store" />
+        <span>Play Store</span>
+      </a>
+    </div>
+
+    <!-- App Preview & Features -->
+    <div class="service-grid">
+      <div class="app-preview">
+        <img src="/assets/app review.webp" alt="App Preview" />
+      </div>
+
+      <div class="features-list">
+        <div class="feature-item">🏥 HospiMe for Medical Facilities</div>
+        <div class="feature-item">🤖 AI-Powered Medical Test</div>
+        <div class="feature-item">⌚ Wearables & Remote Monitoring</div>
+        <div class="feature-item">🗣️ Remote Consultation</div>
+        <div class="feature-item">👩‍⚕️ In-Home Nursing Care</div>
+        <div class="feature-item">💊 Mobile Pharmacy</div>
+        <div class="feature-item">🧘 Sleep & Stress Management</div>
+        <div class="feature-item">🚑 Ambulance SaaS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <a
+    href="https://wa.me/+2347034779412"
+    class="whatsapp-float"
+    target="_blank"
+    title="Chat with us on WhatsApp">
+    <img src="assets/whatsapp-icon.png" alt="WhatsApp Chat" />
+  </a>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 HospiMe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+
+</body>
+</html>
+
